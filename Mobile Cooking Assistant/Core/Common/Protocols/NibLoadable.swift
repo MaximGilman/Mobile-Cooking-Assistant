@@ -6,7 +6,7 @@
 //
 import UIKit
 
-public protocol NibLoadable: class {
+public protocol NibLoadable: AnyObject {
   static var nib: UINib { get }
 }
 
