@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerViewController" customModule="Mobile_Cooking_Assistant" customModuleProvider="target">
+            <connections>
+                <outlet property="minutesBackgroundView" destination="Guv-vS-2cl" id="cJq-hR-80S"/>
+                <outlet property="minutesDownButton" destination="9pW-Ev-QUu" id="jHl-Ge-QNf"/>
+                <outlet property="minutesLabel" destination="wHO-1Z-TQ2" id="Li3-Qh-TnV"/>
+                <outlet property="minutesUpButton" destination="Ycs-9a-00Z" id="jgq-0w-7tQ"/>
+                <outlet property="recentCollectionView" destination="n44-pU-u8K" id="WvS-ru-cS4"/>
+                <outlet property="secondsBackgroundView" destination="ANo-4M-LxJ" id="eLT-Kp-7aC"/>
+                <outlet property="secondsDownButton" destination="TlE-BV-3By" id="j1W-ZU-Bpv"/>
+                <outlet property="secondsLabel" destination="lHC-9F-si4" id="CVz-qC-VtR"/>
+                <outlet property="secondsUpButton" destination="vo5-vw-y1d" id="16h-8d-PvG"/>
+                <outlet property="startPauseButton" destination="tWD-Dq-x3V" id="aLI-ZR-aAm"/>
+                <outlet property="stopButton" destination="Zkp-ka-A9d" id="c2c-XK-tQn"/>
+                <outlet property="timeLeftLabel" destination="quG-Qe-Wy7" id="r8a-0M-lmk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zmi-uj-J4M">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                    <color key="backgroundColor" name="PrimaryBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="c4L-vi-3k8"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Timer" largeTitleDisplayMode="always" id="tmY-2k-y0y"/>
+                    </items>
+                </navigationBar>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Oac-3l-MwR">
+                    <rect key="frame" x="20" y="140" width="374" height="269"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kUx-uT-cPx">
+                            <rect key="frame" x="0.0" y="0.0" width="172" height="269"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-9a-00Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="172" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="uWj-ld-3Oc"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.30845050419999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="chevron.up" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="53"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didTapMinutesUpButton:" destination="-1" eventType="touchUpInside" id="1HH-Ub-YpK"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Guv-vS-2cl">
+                                    <rect key="frame" x="0.0" y="80" width="172" height="109"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHO-1Z-TQ2">
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="109"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="wHO-1Z-TQ2" firstAttribute="leading" secondItem="Guv-vS-2cl" secondAttribute="leading" id="5Iw-Cd-KG0"/>
+                                        <constraint firstAttribute="width" secondItem="Guv-vS-2cl" secondAttribute="height" multiplier="120:76" id="OaE-Wu-b2N"/>
+                                        <constraint firstAttribute="bottom" secondItem="wHO-1Z-TQ2" secondAttribute="bottom" id="eFE-dR-0lW"/>
+                                        <constraint firstAttribute="trailing" secondItem="wHO-1Z-TQ2" secondAttribute="trailing" id="fLR-eu-7A8"/>
+                                        <constraint firstItem="wHO-1Z-TQ2" firstAttribute="top" secondItem="Guv-vS-2cl" secondAttribute="top" id="wfU-D4-xhT"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pW-Ev-QUu">
+                                    <rect key="frame" x="0.0" y="189" width="172" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="RJ6-ag-5vP"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.30845050419999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="53"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didTapMinutesDownButton:" destination="-1" eventType="touchUpInside" id="BTO-bm-zpJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yhc-rD-VZI">
+                            <rect key="frame" x="202" y="0.0" width="172" height="269"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-vw-y1d">
+                                    <rect key="frame" x="0.0" y="0.0" width="172" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="9SH-cl-z9q"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.30845050419999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="chevron.up" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="53"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didTapSecondsUpButton:" destination="-1" eventType="touchUpInside" id="qM5-xo-9Hb"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANo-4M-LxJ">
+                                    <rect key="frame" x="0.0" y="80" width="172" height="109"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHC-9F-si4">
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="109"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="ANo-4M-LxJ" secondAttribute="height" multiplier="120:76" id="ACf-FA-tPS"/>
+                                        <constraint firstItem="lHC-9F-si4" firstAttribute="leading" secondItem="ANo-4M-LxJ" secondAttribute="leading" id="Ceb-gp-52d"/>
+                                        <constraint firstAttribute="trailing" secondItem="lHC-9F-si4" secondAttribute="trailing" id="Fcf-B0-hzn"/>
+                                        <constraint firstAttribute="bottom" secondItem="lHC-9F-si4" secondAttribute="bottom" id="GhW-wh-dNl"/>
+                                        <constraint firstItem="lHC-9F-si4" firstAttribute="top" secondItem="ANo-4M-LxJ" secondAttribute="top" id="sZv-Tv-Wbv"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlE-BV-3By">
+                                    <rect key="frame" x="0.0" y="189" width="172" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="DFL-Nf-Guo"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.30845050419999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="53"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didTapSecondsDownButton:" destination="-1" eventType="touchUpInside" id="Ahe-Th-bni"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6n-nL-Nb7">
+                    <rect key="frame" x="25" y="429" width="369" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n44-pU-u8K">
+                    <rect key="frame" x="0.0" y="458" width="414" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Xfv-Iv-kcS"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pzg-Up-j28">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:29:30 left " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quG-Qe-Wy7">
+                    <rect key="frame" x="138" y="578" width="138.5" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" name="Selected"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="NMN-WN-Apj">
+                    <rect key="frame" x="20" y="637" width="374" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkp-ka-A9d">
+                            <rect key="frame" x="0.0" y="0.0" width="167" height="60"/>
+                            <color key="backgroundColor" red="0.95294117649999999" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.95294117647058818" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Stop">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTapTimerStopButton:" destination="-1" eventType="touchUpInside" id="wYA-jq-vih"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-Dq-x3V">
+                            <rect key="frame" x="207" y="0.0" width="167" height="60"/>
+                            <color key="backgroundColor" red="0.42745098040000001" green="0.85882352939999995" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.95294117649999999" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Start">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTapStartPauseButton:" destination="-1" eventType="touchUpInside" id="eKt-ea-GZD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="450" id="qfe-Nu-7Ss"/>
+                        <constraint firstAttribute="height" constant="60" id="tJr-g0-ajR"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="quG-Qe-Wy7" firstAttribute="top" secondItem="n44-pU-u8K" secondAttribute="bottom" constant="20" id="0ej-00-1Kd"/>
+                <constraint firstItem="Zmi-uj-J4M" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3co-44-FuQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Oac-3l-MwR" secondAttribute="trailing" constant="20" id="3dg-vf-baH"/>
+                <constraint firstItem="B6n-nL-Nb7" firstAttribute="top" secondItem="Oac-3l-MwR" secondAttribute="bottom" constant="20" id="5nt-4b-19E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NMN-WN-Apj" secondAttribute="trailing" constant="20" id="83g-em-yMJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n44-pU-u8K" secondAttribute="trailing" id="8Ut-8i-A20"/>
+                <constraint firstItem="Zmi-uj-J4M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AAx-Td-Jfz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B6n-nL-Nb7" secondAttribute="trailing" constant="20" id="LwA-D2-JBb"/>
+                <constraint firstItem="Oac-3l-MwR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TD2-h3-Pfy"/>
+                <constraint firstItem="n44-pU-u8K" firstAttribute="top" secondItem="B6n-nL-Nb7" secondAttribute="bottom" id="UDs-XL-sga"/>
+                <constraint firstItem="NMN-WN-Apj" firstAttribute="top" secondItem="quG-Qe-Wy7" secondAttribute="bottom" constant="30" id="XnJ-v4-A2p"/>
+                <constraint firstItem="Zmi-uj-J4M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b7p-iW-UlU"/>
+                <constraint firstItem="NMN-WN-Apj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="d3e-4t-zl4"/>
+                <constraint firstItem="quG-Qe-Wy7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h6Y-Ds-uAB"/>
+                <constraint firstItem="n44-pU-u8K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="q68-zl-UBh"/>
+                <constraint firstItem="Oac-3l-MwR" firstAttribute="top" secondItem="Zmi-uj-J4M" secondAttribute="bottom" constant="20" id="sZZ-vs-LQP"/>
+                <constraint firstItem="B6n-nL-Nb7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="uup-ES-snX"/>
+            </constraints>
+            <point key="canvasLocation" x="-58" y="-32"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="chevron.up" catalog="system" width="128" height="72"/>
+        <namedColor name="PrimaryBackground">
+            <color red="0.94509803921568625" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Selected">
+            <color red="0.0" green="0.69803921568627447" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
