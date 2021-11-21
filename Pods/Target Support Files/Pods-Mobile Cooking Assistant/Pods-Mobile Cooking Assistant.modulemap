@@ -1,0 +1,6 @@
+framework module Pods_Mobile_Cooking_Assistant {
+  umbrella header "Pods-Mobile Cooking Assistant-umbrella.h"
+
+  export *
+  module * { export * }
+}
