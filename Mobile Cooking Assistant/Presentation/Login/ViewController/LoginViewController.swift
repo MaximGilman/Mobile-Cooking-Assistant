@@ -49,8 +49,10 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction private func didTapOnRegister(_ sender: Any) {
-        loginService.register { isSuccess in
+        guard let login = emailTextField.text, let password = passwordTextField.text else { return }
+        loginService.register(login: login, password: password)  { isSuccess in
             guard isSuccess else { return }
+            self.dismiss(animated: true)
         }
     }
     
