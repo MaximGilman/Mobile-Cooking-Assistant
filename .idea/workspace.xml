@@ -2,12 +2,235 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03e14cc2-5302-475e-81bb-53285bfc15e9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Mobile Cooking Assistant.xcodeproj/xcshareddata/xcschemes/Mobile Cooking Assistant.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mobile Cooking Assistant.xcworkspace/xcuserdata/maxim.gilman.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mobile Cooking Assistant.xcodeproj/project.xcworkspace/xcuserdata/maxim.gilman.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDAuthState+IOS.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDAuthState+IOS.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDAuthorizationService+IOS.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDAuthorizationService+IOS.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentCatalyst.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentCatalyst.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOS.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOS.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuth/iOS/OIDExternalUserAgentIOSCustomBrowser.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthState.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthState.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthStateChangeDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthStateErrorDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthorizationRequest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthorizationRequest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthorizationResponse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthorizationResponse.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthorizationService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDAuthorizationService.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDClientMetadataParameters.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDClientMetadataParameters.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDDefines.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDEndSessionRequest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDEndSessionRequest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDEndSessionResponse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDEndSessionResponse.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDError.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDError.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDErrorUtilities.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDErrorUtilities.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDExternalUserAgent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDExternalUserAgentRequest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDExternalUserAgentSession.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDFieldMapping.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDFieldMapping.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDGrantTypes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDGrantTypes.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDIDToken.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDIDToken.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDRegistrationRequest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDRegistrationRequest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDRegistrationResponse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDRegistrationResponse.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDResponseTypes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDResponseTypes.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDScopeUtilities.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDScopeUtilities.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDScopes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDScopes.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDServiceConfiguration.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDServiceConfiguration.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDServiceDiscovery.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDServiceDiscovery.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDTokenRequest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDTokenRequest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDTokenResponse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDTokenResponse.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDTokenUtilities.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDTokenUtilities.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDURLQueryComponent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDURLQueryComponent.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDURLSessionProvider.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/AppAuth/Source/AppAuthCore/OIDURLSessionProvider.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/GTMAppAuthFetcherAuthorization+Keychain.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/GTMAppAuthFetcherAuthorization.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/GTMOAuth2KeychainCompatibility.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/Public/GTMAppAuth/GTMAppAuth.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/Public/GTMAppAuth/GTMAppAuthFetcherAuthorization+Keychain.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/Public/GTMAppAuth/GTMAppAuthFetcherAuthorization.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/Public/GTMAppAuth/GTMKeychain.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/Public/GTMAppAuth/GTMOAuth2KeychainCompatibility.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/GTMAppAuth/Sources/iOS/GTMKeychain_iOS.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMAppAuth/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDAuthStateMigration.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDAuthStateMigration.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDAuthentication.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDAuthentication_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDCallbackQueue.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDCallbackQueue.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDConfiguration.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDEMMErrorHandler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDEMMErrorHandler.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDGoogleUser.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDGoogleUser_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDMDMPasscodeCache.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDMDMPasscodeCache.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDMDMPasscodeState.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDMDMPasscodeState.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDMDMPasscodeState_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDProfileData.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDProfileData_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDScopes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDScopes.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignIn.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInButton.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInCallbackSchemes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInCallbackSchemes.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInInternalOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInInternalOptions.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInPreferences.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInPreferences.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInStrings.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignInStrings.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/GIDSignIn_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/NSBundle+GID3PAdditions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/NSBundle+GID3PAdditions.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Public/GoogleSignIn/GIDAuthentication.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Public/GoogleSignIn/GIDConfiguration.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Public/GoogleSignIn/GIDGoogleUser.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Public/GoogleSignIn/GIDProfileData.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Public/GoogleSignIn/GIDSignIn.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Public/GoogleSignIn/GIDSignInButton.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Public/GoogleSignIn/GoogleSignIn.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Resources/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Resources/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Resources/google@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Resources/google@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/ar.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/ca.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/cs.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/da.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/de.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/el.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/en.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/en_GB.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/es.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/es_MX.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/fi.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/fr.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/fr_CA.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/he.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/hi.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/hr.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/hu.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/id.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/it.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/ja.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/ko.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/ms.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/nb.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/nl.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/pl.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/pt.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/pt_BR.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/pt_PT.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/ro.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/ru.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/sk.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/sv.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/th.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/tr.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/uk.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/vi.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/zh_CN.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/GoogleSignIn/Sources/Strings/zh_TW.lproj/GoogleSignIn.strings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/GoogleSignIn/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/maxim.gilman.xcuserdatad/xcschemes/AppAuth.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/maxim.gilman.xcuserdatad/xcschemes/GTMAppAuth.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/maxim.gilman.xcuserdatad/xcschemes/GTMSessionFetcher.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/maxim.gilman.xcuserdatad/xcschemes/GoogleSignIn-GoogleSignIn.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/maxim.gilman.xcuserdatad/xcschemes/GoogleSignIn.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/AppAuth/AppAuth-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/AppAuth/AppAuth-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/AppAuth/AppAuth-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/AppAuth/AppAuth-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/AppAuth/AppAuth.debug.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/AppAuth/AppAuth.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/AppAuth/AppAuth.release.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMAppAuth/GTMAppAuth-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMAppAuth/GTMAppAuth-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMAppAuth/GTMAppAuth-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMAppAuth/GTMAppAuth.debug.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMAppAuth/GTMAppAuth.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMAppAuth/GTMAppAuth.release.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.debug.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.release.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GoogleSignIn/GoogleSignIn-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GoogleSignIn/GoogleSignIn-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GoogleSignIn/GoogleSignIn-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GoogleSignIn/GoogleSignIn.debug.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GoogleSignIn/GoogleSignIn.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GoogleSignIn/GoogleSignIn.release.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/GoogleSignIn/ResourceBundle-GoogleSignIn-GoogleSignIn-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-frameworks-Debug-input-files.xcfilelist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-frameworks-Debug-output-files.xcfilelist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-frameworks-Release-input-files.xcfilelist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-frameworks-Release-output-files.xcfilelist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-frameworks.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mobile Cooking Assistant.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile Cooking Assistant.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mobile Cooking Assistant.xcworkspace/xcuserdata/maxim.gilman.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile Cooking Assistant.xcworkspace/xcuserdata/maxim.gilman.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mobile Cooking Assistant.xcworkspace/xcuserdata/maxim.gilman.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile Cooking Assistant.xcworkspace/xcuserdata/maxim.gilman.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mobile Cooking Assistant/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile Cooking Assistant/AppDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mobile Cooking Assistant/Business Logic/ServiceLayer/LoginService.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile Cooking Assistant/Business Logic/ServiceLayer/LoginService.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mobile Cooking Assistant/Presentation/Login/ViewController/LoginViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile Cooking Assistant/Presentation/Login/ViewController/LoginViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mobile Cooking Assistant/Presentation/Login/ViewController/LoginViewController.xib" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile Cooking Assistant/Presentation/Login/ViewController/LoginViewController.xib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mobile Cooking Assistant/Supporting Files/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Mobile Cooking Assistant/Supporting Files/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/maxim.gilman.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/maxim.gilman.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-acknowledgements.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant-acknowledgements.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Mobile Cooking Assistant/Pods-Mobile Cooking Assistant.release.xcconfig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +267,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -64,7 +289,7 @@
       <workItem from="1637675383278" duration="2369000" />
       <workItem from="1638297974412" duration="195000" />
       <workItem from="1638298415500" duration="111000" />
-      <workItem from="1638298534246" duration="633000" />
+      <workItem from="1638298534246" duration="1854000" />
     </task>
     <servers />
   </component>

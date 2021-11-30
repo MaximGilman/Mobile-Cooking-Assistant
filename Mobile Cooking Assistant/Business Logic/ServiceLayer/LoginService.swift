@@ -87,7 +87,7 @@ final class BaseLoginService: LoginService {
     }
     
     func logInGoogle(completion: @escaping (Bool) -> Void) {
-        let signInConfig = GIDConfiguration.init(clientID: "206916034058-9ln4c2s8g418t481ho4hqje4ff6himhe.apps.googleusercontent.com")
+     //   let signInConfig = GIDConfiguration.init(clientID: "206916034058-9ln4c2s8g418t481ho4hqje4ff6himhe.apps.googleusercontent.com")
     }
 }
 
