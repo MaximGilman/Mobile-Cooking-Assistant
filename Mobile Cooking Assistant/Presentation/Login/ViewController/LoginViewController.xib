@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Mobile_Cooking_Assistant" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="SqS-MR-zcn" id="oKl-tw-qpN"/>
+                <outlet property="googleButton" destination="GKR-je-jc6" id="KX8-6H-9h3"/>
                 <outlet property="loginButton" destination="5WW-LG-0gh" id="CPw-SZ-apU"/>
                 <outlet property="passwordTextField" destination="kXP-Ff-Wee" id="J4C-vM-Mvb"/>
                 <outlet property="registerButton" destination="Cdt-7m-BAw" id="ApM-cs-HCk"/>
@@ -82,6 +84,15 @@
                         <action selector="didTapOnRegister:" destination="-1" eventType="touchUpInside" id="S4V-hs-tky"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKR-je-jc6" customClass="GIDSignInButton">
+                    <rect key="frame" x="131" y="589" width="153" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <action selector="didTapOnGoogle:" destination="-1" eventType="touchUpInside" id="Ij3-jM-I5Z"/>
+                        <action selector="googleSIgnIn:" destination="-1" eventType="valueChanged" id="MZ4-6g-e59"/>
+                    </connections>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,12 +116,15 @@
                 <constraint firstItem="Cdt-7m-BAw" firstAttribute="trailing" secondItem="5WW-LG-0gh" secondAttribute="trailing" id="yTP-kA-zTK"/>
                 <constraint firstItem="SqS-MR-zcn" firstAttribute="top" secondItem="Dbf-TJ-lMc" secondAttribute="bottom" constant="8" id="zZK-R4-p5W"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="80"/>
+            <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
         </view>
     </objects>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

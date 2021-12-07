@@ -6,13 +6,15 @@
 //
 
 import UIKit
-
+import GoogleSignIn
 final class LoginViewController: UIViewController {
     
     @IBOutlet private var emailTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     @IBOutlet private var loginButton: UIButton!
-    @IBOutlet private var registerButton: UIButton!
+    @IBOutlet private var registerButton: UIButton!    
+    @IBOutlet private var googleButton: GIDSignInButton!
+    
     
     private let loginService: LoginService
     
@@ -49,9 +51,20 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction private func didTapOnRegister(_ sender: Any) {
-        loginService.register { isSuccess in
-            guard isSuccess else { return }
-        }
+        let registerViewController = RegisterViewController()
+        registerViewController.modalPresentationStyle = .fullScreen
+        self.present(registerViewController, animated: true)    
+    }
+    
+    @IBAction func didTapOnGoogle(_ sender: GIDSignInButton) {
+        let signInConfig = GIDConfiguration.init(clientID: "206916034058-blb7q55t03cpfnhi8tifr7vt8u3jvt7j.apps.googleusercontent.com")
+        
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
+            guard error == nil else { return }
+            self.dismiss(animated: true)
+
+            // If sign in succeeded, display the app's main content View.
+          }
     }
     
     private func setupViews() {
@@ -64,6 +77,6 @@ final class LoginViewController: UIViewController {
         passwordTextField.layer.masksToBounds = true
         
         loginButton.layer.cornerRadius = loginButton.bounds.midY
-        registerButton.layer.cornerRadius = loginButton.bounds.midY
+        registerButton.layer.cornerRadius = registerButton.bounds.midY
     }
 }

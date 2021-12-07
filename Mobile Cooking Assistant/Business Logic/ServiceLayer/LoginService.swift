@@ -10,7 +10,8 @@ import Foundation
 protocol LoginService: AnyObject {
     func logIn(login: String, password: String, completion: @escaping (Bool) -> Void)
     func logOut(completion: @escaping (Bool) -> Void)
-    func register(completion: @escaping (Bool) -> Void)
+    func register(login: String, password: String, email: String, userName: String, completion: @escaping (Bool) -> Void)
+    func logInGoogle(completion:@escaping (Bool)->Void)
 }
 
 final class BaseLoginService: LoginService {
@@ -52,8 +53,43 @@ final class BaseLoginService: LoginService {
         completion(true)
     }
     
-    func register(completion: @escaping (Bool) -> Void) {
-        completion(true)
+    func register(login: String, password: String, email: String, userName: String,completion: @escaping (Bool) -> Void) {
+        guard !login.isEmpty && !password.isEmpty else {
+            completion(false)
+            return
+        }
+        
+        let dict: [String: Any] = [
+            "login": login,
+            "password": password,
+            "name":userName,
+            "email":email
+        ]
+        let url = URL(string: "http://94.242.58.199/dipd/user/create")!
+        var request = URLRequest(url: url)
+        var jsonData = NSData()
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: dict, options: .fragmentsAllowed) as NSData
+        } catch {
+            print(error.localizedDescription)
+        }
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData as Data
+        request.httpMethod = "POST"
+        
+        URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            DispatchQueue.main.async {
+                if error != nil || (response as! HTTPURLResponse).statusCode != 200 {
+                    completion(false)
+                } else if let data = data {
+                    completion(true)
+                }
+            }
+        }.resume()
+    }
+    
+    func logInGoogle(completion: @escaping (Bool) -> Void) {
+     //   let signInConfig = GIDConfiguration.init(clientID: "206916034058-9ln4c2s8g418t481ho4hqje4ff6himhe.apps.googleusercontent.com")
     }
 }
 
