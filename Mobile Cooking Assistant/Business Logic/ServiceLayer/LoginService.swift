@@ -10,7 +10,7 @@ import Foundation
 protocol LoginService: AnyObject {
     func logIn(login: String, password: String, completion: @escaping (Bool) -> Void)
     func logOut(completion: @escaping (Bool) -> Void)
-    func register(login: String, password: String, completion: @escaping (Bool) -> Void)
+    func register(login: String, password: String, email: String, userName: String, completion: @escaping (Bool) -> Void)
     func logInGoogle(completion:@escaping (Bool)->Void)
 }
 
@@ -53,7 +53,7 @@ final class BaseLoginService: LoginService {
         completion(true)
     }
     
-    func register(login: String, password: String, completion: @escaping (Bool) -> Void) {
+    func register(login: String, password: String, email: String, userName: String,completion: @escaping (Bool) -> Void) {
         guard !login.isEmpty && !password.isEmpty else {
             completion(false)
             return
@@ -61,9 +61,11 @@ final class BaseLoginService: LoginService {
         
         let dict: [String: Any] = [
             "login": login,
-            "password": password
+            "password": password,
+            "name":userName,
+            "email":email
         ]
-        let url = URL(string: "http://94.242.58.199/dipd/user/login")!
+        let url = URL(string: "http://94.242.58.199/dipd/user/create")!
         var request = URLRequest(url: url)
         var jsonData = NSData()
         do {

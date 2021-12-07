@@ -17,6 +17,7 @@ final class AppViewController: UITabBarController {
         viewControllers = [catalog, myRecipes, timer]
         
         if !isAuthenticated {
+
             let loginViewController = LoginViewController()
             loginViewController.modalPresentationStyle = .fullScreen
             present(loginViewController, animated: true)

@@ -85,7 +85,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKR-je-jc6" customClass="GIDSignInButton">
-                    <rect key="frame" x="131" y="152" width="153" height="44"/>
+                    <rect key="frame" x="131" y="589" width="153" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
