@@ -14,6 +14,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private var loginButton: UIButton!
     @IBOutlet private var registerButton: UIButton!    
     @IBOutlet private var googleButton: GIDSignInButton!
+    @IBOutlet var ErrorLabel: UILabel!
     
     
     private let loginService: LoginService
@@ -34,6 +35,7 @@ final class LoginViewController: UIViewController {
         setupViews()
         emailTextField.text = "wtf1"
         passwordTextField.text = "wtf1"
+        ErrorLabel.text = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,9 +46,11 @@ final class LoginViewController: UIViewController {
     
     @IBAction private func didTapOnLogin(_ sender: Any) {
         guard let login = emailTextField.text, let password = passwordTextField.text else { return }
-        loginService.logIn(login: login, password: password) { [weak self] isAuthorized in
-            guard isAuthorized else { return }
-            self?.dismiss(animated: true)
+         loginService.logIn(login: login, password: password) { [weak self] errorMsg, user in
+            guard errorMsg == "" else {
+                self?.ErrorLabel.text=errorMsg
+                return }
+             self?.dismiss(animated: true)
         }
     }
     
@@ -78,5 +82,7 @@ final class LoginViewController: UIViewController {
         
         loginButton.layer.cornerRadius = loginButton.bounds.midY
         registerButton.layer.cornerRadius = registerButton.bounds.midY
+        googleButton.layer.cornerRadius = googleButton.bounds.midY
+        
     }
 }
