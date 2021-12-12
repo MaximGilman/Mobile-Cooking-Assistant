@@ -14,7 +14,7 @@ final class AppViewController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        viewControllers = [catalog, myRecipes, timer]
+        viewControllers = [catalog, myRecipes, timer, profile]
         
         if !isAuthenticated {
 
@@ -55,6 +55,16 @@ final class AppViewController: UITabBarController {
         timerViewController.tabBarItem = tabBarItem
         
         return timerViewController
+    }()
+    
+    private lazy var profile: ProfileViewController = {
+        let profileViewController = ProfileViewController()
+        let defaultImage: UIImage = UIImage(imageLiteralResourceName: "Profile")
+        
+        let tabBarItem = UITabBarItem(title: "Profile", image: defaultImage, selectedImage: defaultImage)
+        profileViewController.tabBarItem = tabBarItem
+        
+        return profileViewController
     }()
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ingredient {
+struct Ingredient: Hashable {
     let id: Int
     let name: String
 }

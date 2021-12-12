@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -158,8 +158,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n44-pU-u8K">
-                    <rect key="frame" x="0.0" y="458" width="414" height="100"/>
+                <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n44-pU-u8K">
+                    <rect key="frame" x="0.0" y="473" width="414" height="100"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="Xfv-Iv-kcS"/>
@@ -170,15 +170,19 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1MV-hW-25c"/>
+                        <outlet property="delegate" destination="-1" id="vYI-uO-xS5"/>
+                    </connections>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:29:30 left " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quG-Qe-Wy7">
-                    <rect key="frame" x="138" y="578" width="138.5" height="29"/>
+                    <rect key="frame" x="138" y="593" width="138.5" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <color key="textColor" name="Selected"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="NMN-WN-Apj">
-                    <rect key="frame" x="20" y="637" width="374" height="60"/>
+                    <rect key="frame" x="20" y="652" width="374" height="60"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zkp-ka-A9d">
                             <rect key="frame" x="0.0" y="0.0" width="167" height="60"/>
@@ -225,7 +229,7 @@
                 <constraint firstItem="Zmi-uj-J4M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AAx-Td-Jfz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B6n-nL-Nb7" secondAttribute="trailing" constant="20" id="LwA-D2-JBb"/>
                 <constraint firstItem="Oac-3l-MwR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TD2-h3-Pfy"/>
-                <constraint firstItem="n44-pU-u8K" firstAttribute="top" secondItem="B6n-nL-Nb7" secondAttribute="bottom" id="UDs-XL-sga"/>
+                <constraint firstItem="n44-pU-u8K" firstAttribute="top" secondItem="B6n-nL-Nb7" secondAttribute="bottom" constant="15" id="UDs-XL-sga"/>
                 <constraint firstItem="NMN-WN-Apj" firstAttribute="top" secondItem="quG-Qe-Wy7" secondAttribute="bottom" constant="30" id="XnJ-v4-A2p"/>
                 <constraint firstItem="Zmi-uj-J4M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b7p-iW-UlU"/>
                 <constraint firstItem="NMN-WN-Apj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="d3e-4t-zl4"/>

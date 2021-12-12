@@ -30,5 +30,22 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
 
 PODFILE CHECKSUM: 763de48ec4e4228a660d13754dabb2433fab7ff0
+  - SnapKit (5.0.1)
+  - UICircularProgressRing (8.0.0)
+
+DEPENDENCIES:
+  - SnapKit (~> 5.0.0)
+  - UICircularProgressRing
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+    - UICircularProgressRing
+
+SPEC CHECKSUMS:
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  UICircularProgressRing: 19927375b2b21b5fa5fd9582f15ccdef9659da16
+
+PODFILE CHECKSUM: 60b1ac84dcfe9f25ec406c0abe50b8606977f9c1
 
 COCOAPODS: 1.11.2
