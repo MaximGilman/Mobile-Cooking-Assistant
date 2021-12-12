@@ -58,8 +58,10 @@ final class BaseLoginService: LoginService {
                 } else if let data = data {
                     let id = responseDict["key"] as! Int
                     let name = responseDict["name"] as! String
-
-                    user = User(id:id, name:name, photo:nil, recipes:nil, loginData:nil)
+                    let loginId = responseDict["login_id"] as! Int
+                    
+                    let loginData = LoggingData(id:loginId, login:login, password: password)
+                    user = User(id:id, name:name, photo:nil, recipes:nil, loginData:loginData)
                     completion("",user)
                 }
             }
@@ -111,7 +113,7 @@ final class BaseLoginService: LoginService {
                 } else if let data = data {
                     let id = responseDict["key"] as! Int
                     let name = responseDict["name"] as! String
-
+                    // тут можно не возващать - все равно потом снова логиниться
                     user = User(id:id, name:name, photo:nil, recipes:nil, loginData:nil)
                     completion("",user)
                 }
