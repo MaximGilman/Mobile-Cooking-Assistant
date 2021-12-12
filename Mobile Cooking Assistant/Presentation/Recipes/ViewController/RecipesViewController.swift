@@ -44,7 +44,10 @@ final class RecipesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? FullRecipeCell {
             cell.showAnimatedPress { [weak self] in
-                
+                guard let self = self else { return }
+                let currentRecipe = self.recipes[indexPath.row]
+                let detailsController = RecipeDetailsViewController(recipe: currentRecipe)
+                self.navigationController?.pushViewController(detailsController, animated: true)
             }
         }
     }

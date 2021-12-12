@@ -100,7 +100,10 @@ extension CatalogViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? RecipeCell {
             cell.showAnimatedPress { [weak self] in
-                
+                guard let self = self else { return }
+                let currentRecipe = self.recipes![indexPath.row]
+                let detailsController = RecipeDetailsViewController(recipe: currentRecipe)
+                self.navigationController?.pushViewController(detailsController, animated: true)
             }
         } else if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCell {
             cell.showAnimatedPress { [weak self] in

@@ -16,7 +16,15 @@ struct Recipe {
     let numberOfPortions: Int
     let photo: UIImage
     let steps: [Step]
-    let ingredients: [Ingredient]
+    
+    var ingredients: [Ingredient] {
+        var result: [Ingredient] = []
+        
+        steps.forEach {
+            result.append(contentsOf: $0.ingredients)
+        }
+        return Array(Set(result))
+    }
 }
 
 enum RecipeType: String {
