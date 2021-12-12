@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RecipePortionsView" customModule="Mobile_Cooking_Assistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6G-3A-CJE">
+                    <rect key="frame" x="10" y="54" width="394" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 portion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmk-fZ-9li">
+                    <rect key="frame" x="20" y="172" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcW-Rp-Dom">
+                    <rect key="frame" x="0.0" y="83" width="414" height="89"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JcW-Rp-Dom" firstAttribute="top" secondItem="J6G-3A-CJE" secondAttribute="bottom" id="58Y-Au-7zG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="J6G-3A-CJE" secondAttribute="trailing" constant="10" id="5gj-gM-KHN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Fmk-fZ-9li" secondAttribute="trailing" constant="20" id="6eS-va-92l"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JcW-Rp-Dom" secondAttribute="trailing" id="UfE-Bj-1hF"/>
+                <constraint firstItem="J6G-3A-CJE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="UiR-Nr-LY1"/>
+                <constraint firstItem="JcW-Rp-Dom" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Uj6-za-1bO"/>
+                <constraint firstItem="Fmk-fZ-9li" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="kWa-mL-QQw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Fmk-fZ-9li" secondAttribute="bottom" constant="20" id="p7n-FU-TUU"/>
+                <constraint firstItem="Fmk-fZ-9li" firstAttribute="top" secondItem="JcW-Rp-Dom" secondAttribute="bottom" id="pW9-ad-eqp"/>
+                <constraint firstItem="J6G-3A-CJE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="uOE-tu-Yvk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="portionsLabel" destination="Fmk-fZ-9li" id="ybS-gS-IHt"/>
+                <outlet property="sliderContainerView" destination="JcW-Rp-Dom" id="NiL-XT-Rur"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="-173.77232142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,16 +9,20 @@ import UIKit
 
 final class RecipeDetailsHeaderView: UIView, NibLoadable {
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var timeLabel: UILabel!
     
-    static func make() -> RecipeDetailsHeaderView {
+    static func make(recipe: Recipe) -> RecipeDetailsHeaderView {
         let view = RecipeDetailsHeaderView.loadFromNib()
+        view.imageView.image = recipe.photo
+        view.titleLabel.text = recipe.title
         
         return view
     }
     
     @IBAction private func onLikeButtonTapped(_ sender: Any) {
+        
     }
     
 }
