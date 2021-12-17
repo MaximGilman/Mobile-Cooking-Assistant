@@ -11,11 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="Mobile_Cooking_Assistant" customModuleProvider="target">
             <connections>
                 <outlet property="BackButton" destination="WYV-TT-6WB" id="UrJ-wj-oN5"/>
+                <outlet property="ConfirmPasswordTextBox" destination="zqf-BO-i8o" id="QBy-1v-PhO"/>
+                <outlet property="EmailTextBox" destination="sgc-gB-qLh" id="ohz-Os-viM"/>
                 <outlet property="ErrorLabel" destination="K3Y-og-n43" id="f7C-N2-OFo"/>
-                <outlet property="LoginTextBox" destination="FKA-HO-yEO" id="g7u-Tv-cy5"/>
-                <outlet property="PasswordTextBox" destination="zqf-BO-i8o" id="cda-UL-rEe"/>
+                <outlet property="PasswordTextBox" destination="FKA-HO-yEO" id="Bck-Yx-Xwo"/>
                 <outlet property="RegisterButton" destination="Xhq-FB-PEu" id="o8i-06-mUs"/>
-                <outlet property="UserNameTextBox" destination="FKA-HO-yEO" id="hAx-ER-4mu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
