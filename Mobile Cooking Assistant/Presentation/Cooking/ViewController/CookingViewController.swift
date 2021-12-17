@@ -56,7 +56,7 @@ final class CookingViewController: UIPageViewController {
         super.viewDidDisappear(animated)
         
         if !finishedCooking {
-            cookingService.saveLastState(.init(lastStep: recipe.steps[currentIndex], lastPortions: portions))
+            cookingService.saveLastState(.init(lastStep: recipe.steps[currentIndex], lastPortions: portions), recipe: recipe)
         }
     }
     
@@ -68,6 +68,9 @@ final class CookingViewController: UIPageViewController {
         
         nextButton = UIButton()
         nextButton.setTitle("Next", for: .normal)
+        if currentIndex == recipe.steps.count - 1 {
+            nextButton.setTitle("Finish", for: .normal)
+        }
         nextButton.setTitleColor(.black, for: .normal)
         nextButton.backgroundColor = .white
         nextButton.makeRound(.specific(radius: 10))
@@ -111,7 +114,7 @@ final class CookingViewController: UIPageViewController {
     
     @objc private func nextDidTap(_ sender: Any) {
         if currentIndex == self.recipe.steps.count - 1 {
-            cookingService.saveLastState(nil)
+            cookingService.saveLastState(nil, recipe: nil)
             finishedCooking = true
             navigationController?.popViewController(animated: true)
         }

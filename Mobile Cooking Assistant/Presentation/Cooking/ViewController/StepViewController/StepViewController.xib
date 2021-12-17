@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepViewController" customModule="Mobile_Cooking_Assistant" customModuleProvider="target">
             <connections>
                 <outlet property="bodyLabel" destination="Ate-fr-rJV" id="O3D-uF-YVI"/>
+                <outlet property="ingredientsLabel" destination="R3g-6e-XR4" id="C6g-mQ-kFC"/>
                 <outlet property="ingredientsView" destination="gSo-0Q-j5S" id="teH-bM-VF2"/>
                 <outlet property="titleLabel" destination="VZT-pJ-Iox" id="QAj-zG-Rov"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

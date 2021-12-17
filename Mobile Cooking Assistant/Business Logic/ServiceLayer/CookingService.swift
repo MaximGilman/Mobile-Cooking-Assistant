@@ -13,6 +13,8 @@ final class CookingService {
     
     private(set) var state: CookingState?
     
+    private(set) var currentRecipe: Recipe?
+    
     func startTimer(duration: TimerValue) {
         let interval = 1
         var timePassed = 0
@@ -31,7 +33,8 @@ final class CookingService {
         timer?.invalidate()
     }
     
-    func saveLastState(_ state: CookingState?) {
+    func saveLastState(_ state: CookingState?, recipe: Recipe?) {
+        currentRecipe = recipe
         self.state = state
     }
 }

@@ -55,14 +55,15 @@ final class AppViewController: UITabBarController {
         return navigationController
     }()
     
-    private lazy var myRecipes: MyRecipesViewController = {
+    private lazy var myRecipes: UINavigationController = {
         let recipesViewController = MyRecipesViewController()
+        let navigationController = UINavigationController(rootViewController: recipesViewController)
         let defaultImage: UIImage = UIImage(imageLiteralResourceName: "Timer")
         
         let tabBarItem = UITabBarItem(title: "My Recipes", image: defaultImage, selectedImage: defaultImage)
-        recipesViewController.tabBarItem = tabBarItem
+        navigationController.tabBarItem = tabBarItem
         
-        return recipesViewController
+        return navigationController
     }()
     
     private lazy var timer: TimerViewController = {

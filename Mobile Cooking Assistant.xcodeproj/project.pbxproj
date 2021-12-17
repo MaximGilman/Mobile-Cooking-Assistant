@@ -26,6 +26,7 @@
 		F76AB3A027024B0C00F00799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76AB39E27024B0C00F00799 /* Main.storyboard */; };
 		F76AB3A227024B0E00F00799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F76AB3A127024B0E00F00799 /* Assets.xcassets */; };
 		F76AB3A527024B0E00F00799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76AB3A327024B0E00F00799 /* LaunchScreen.storyboard */; };
+		F780B774276D37A500E7F3A9 /* MyRecipesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F780B773276D37A500E7F3A9 /* MyRecipesViewController.xib */; };
 		F78DED7B27024E0F00EF7A3D /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78DED7A27024E0F00EF7A3D /* AppViewController.swift */; };
 		F79308F4274AC90000FD454C /* RecipeDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79308F3274AC90000FD454C /* RecipeDetailsHeaderView.swift */; };
 		F79308F6274AC90D00FD454C /* RecipeDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79308F5274AC90D00FD454C /* RecipeDetailsHeaderView.xib */; };
@@ -98,6 +99,7 @@
 		F76AB3A127024B0E00F00799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F76AB3A427024B0E00F00799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F76AB3A627024B0E00F00799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F780B773276D37A500E7F3A9 /* MyRecipesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecipesViewController.xib; sourceTree = "<group>"; };
 		F78DED7A27024E0F00EF7A3D /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		F79308F3274AC90000FD454C /* RecipeDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsHeaderView.swift; sourceTree = "<group>"; };
 		F79308F5274AC90D00FD454C /* RecipeDetailsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsHeaderView.xib; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 		F7D754C42702555100492CE4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F780B773276D37A500E7F3A9 /* MyRecipesViewController.xib */,
 				F7D754C52702555E00492CE4 /* MyRecipesViewController.swift */,
 			);
 			path = ViewController;
@@ -708,6 +711,7 @@
 				F7C68FDD275E7E9C0080ECA0 /* StepViewController.xib in Resources */,
 				F70D6E132714C8720003BD15 /* CategoryCell.xib in Resources */,
 				F7C559582714B14F00AF42AC /* RecipeCell.xib in Resources */,
+				F780B774276D37A500E7F3A9 /* MyRecipesViewController.xib in Resources */,
 				F7BAE49A274BB53E00AFBB6C /* RecipeStepView.xib in Resources */,
 				F7E673F8274BEEAA00D1EB7A /* ProfileAchievementsView.xib in Resources */,
 				F7CBAC2A27025A80003CDD49 /* LoginViewController.xib in Resources */,

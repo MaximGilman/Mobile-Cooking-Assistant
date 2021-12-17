@@ -12,6 +12,7 @@ final class StepViewController: UIViewController {
     
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var bodyLabel: UILabel!
+    @IBOutlet private var ingredientsLabel: UILabel!
     @IBOutlet private var ingredientsView: UIView!
     
     private let step: Step
@@ -36,7 +37,10 @@ final class StepViewController: UIViewController {
     }
 
     private func setupIngrevientsViewIfNeeded() {
-        guard step.ingredients.count > 0 else { return }
+        guard step.ingredients.count > 0 else {
+            ingredientsLabel.isHidden = true
+            return
+        }
         let view = RecipeIngredientsView.make(ingredients: step.ingredients, shouldShowTitle: false)
         ingredientsView.addSubview(view)
         view.snp.makeConstraints { make in
