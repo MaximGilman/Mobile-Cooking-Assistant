@@ -13,9 +13,31 @@ final class ProfileViewController: UIViewController {
     @IBOutlet private var achivementsContainerView: UIView!
     @IBOutlet private var logoutButton: UIButton!
     
+    @IBOutlet var UserNameLabel: UILabel!
+    private var sl: ServiceLayer
+
+    init(sl: ServiceLayer = ServiceLayer.shared) {
+        self.sl = sl
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let user = sl.user
+        let nname = user.name
+        UserNameLabel?.text = nname
+        setupAchivements()
+        logoutButton.makeRound(.complete)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let user = sl.user
+        let nname = user.name
+        UserNameLabel?.text = nname
         setupAchivements()
         logoutButton.makeRound(.complete)
     }
@@ -33,4 +55,11 @@ final class ProfileViewController: UIViewController {
         achivementsContainerView.layoutIfNeeded()
     }
 
+    @IBAction func didTapOnLogOut(_ sender: UIButton) {
+        let loginViewController = LoginViewController()
+        loginViewController.modalPresentationStyle = .fullScreen
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: "isAuth")
+        self.present(loginViewController, animated: true)
+    }
 }

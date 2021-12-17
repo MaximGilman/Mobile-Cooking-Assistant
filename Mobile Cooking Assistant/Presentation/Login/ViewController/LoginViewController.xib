@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Mobile_Cooking_Assistant" customModuleProvider="target">
             <connections>
+                <outlet property="ErrorLabel" destination="EKO-Dq-Waq" id="wlr-Wp-bed"/>
                 <outlet property="emailTextField" destination="SqS-MR-zcn" id="oKl-tw-qpN"/>
                 <outlet property="googleButton" destination="GKR-je-jc6" id="KX8-6H-9h3"/>
                 <outlet property="loginButton" destination="5WW-LG-0gh" id="CPw-SZ-apU"/>
@@ -93,6 +94,13 @@
                         <action selector="googleSIgnIn:" destination="-1" eventType="valueChanged" id="MZ4-6g-e59"/>
                     </connections>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-Dq-Waq">
+                    <rect key="frame" x="20" y="44" width="368" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,6 +133,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

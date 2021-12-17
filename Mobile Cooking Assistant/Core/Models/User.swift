@@ -10,7 +10,7 @@ import Foundation
 struct User {
     let id: Int
     let name: String
-    let photo: Data
-    let recipes: [Recipe]
-    let loginData: LoggingData
+    let photo: Data?
+    let recipes: [Recipe]?
+    let loginData: LoggingData?
 }

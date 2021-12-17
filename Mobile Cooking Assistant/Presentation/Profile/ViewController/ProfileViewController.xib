@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Mobile_Cooking_Assistant" customModuleProvider="target">
             <connections>
+                <outlet property="UserNameLabel" destination="prv-L7-Oqf" id="7a8-ym-uGc"/>
                 <outlet property="achivementsContainerView" destination="OrK-W9-srt" id="9bf-vc-lu5"/>
                 <outlet property="logoutButton" destination="Kfs-b8-2lx" id="dJj-fO-LyS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -109,6 +110,9 @@
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                    <connections>
+                        <action selector="didTapOnLogOut:" destination="-1" eventType="touchUpInside" id="rtV-eN-IvX"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

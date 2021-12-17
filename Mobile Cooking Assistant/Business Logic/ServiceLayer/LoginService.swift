@@ -8,18 +8,20 @@
 import Foundation
 
 protocol LoginService: AnyObject {
-    func logIn(login: String, password: String, completion: @escaping (Bool) -> Void)
+    func logIn(login: String, password: String, completion: @escaping (String, User?) -> Void)
     func logOut(completion: @escaping (Bool) -> Void)
-    func register(login: String, password: String, email: String, userName: String, completion: @escaping (Bool) -> Void)
+    func register(login: String, password: String, userName: String, completion: @escaping (String, User?) -> Void)
     func logInGoogle(completion:@escaping (Bool)->Void)
 }
 
 final class BaseLoginService: LoginService {
-    func logIn(login: String, password: String, completion: @escaping (Bool) -> Void) {
-        guard !login.isEmpty && !password.isEmpty else {
-            completion(false)
-            return
+    
+    func logIn(login: String, password: String, completion: @escaping (String, User?) -> Void){
+        
+        if(login.isEmpty || password.isEmpty){
+            completion("login or password is not filled", nil)
         }
+        
         
         let dict: [String: Any] = [
             "login": login,
@@ -38,12 +40,29 @@ final class BaseLoginService: LoginService {
         request.httpBody = jsonData as Data
         request.httpMethod = "POST"
         
+        var errorString : String = ""
+        var user :User?
         URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
             DispatchQueue.main.async {
+                var responseDict = [String: Any]()
+                do {
+                    responseDict = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
+                }
+                catch let error as NSError {
+                    print(error)
+                }
+                
                 if error != nil || (response as! HTTPURLResponse).statusCode != 200 {
-                    completion(false)
+                    errorString = responseDict["message"] as! String
+                    completion(errorString, nil)
                 } else if let data = data {
-                    completion(true)
+                    let id = responseDict["key"] as! Int
+                    let name = responseDict["name"] as! String
+                    let loginId = responseDict["login_id"] as! Int
+                    
+                    let loginData = LoggingData(id:loginId, login:login, password: password)
+                    user = User(id:id, name:name, photo:nil, recipes:nil, loginData:loginData)
+                    completion("",user)
                 }
             }
         }.resume()
@@ -53,17 +72,18 @@ final class BaseLoginService: LoginService {
         completion(true)
     }
     
-    func register(login: String, password: String, email: String, userName: String,completion: @escaping (Bool) -> Void) {
-        guard !login.isEmpty && !password.isEmpty else {
-            completion(false)
+    func register(login: String, password: String, userName: String,completion: @escaping (String, User?) -> Void) {
+        guard !login.isEmpty && !password.isEmpty && !userName.isEmpty else {
+            completion("some data is not filled", nil)
             return
         }
         
         let dict: [String: Any] = [
             "login": login,
             "password": password,
-            "name":userName,
-            "email":email
+            "name": login,
+            "email": login
+
         ]
         let url = URL(string: "http://94.242.58.199/dipd/user/create")!
         var request = URLRequest(url: url)
@@ -76,41 +96,54 @@ final class BaseLoginService: LoginService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData as Data
         request.httpMethod = "POST"
-        
+        var errorString : String = ""
+        var user :User?
         URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
             DispatchQueue.main.async {
+                
+                
                 if error != nil || (response as! HTTPURLResponse).statusCode != 200 {
-                    completion(false)
+                    var responseDict = [String: Any]()
+                    do {
+                        responseDict = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
+                        errorString = responseDict["message"] as? String ?? "unhandled error" as! String
+                    }
+                    catch let error as NSError {
+                        print(error)
+                        completion(errorString, nil)
+                    }
+                    completion(errorString, nil)
                 } else if let data = data {
-                    completion(true)
+                    // тут можно не возващать - все равно потом снова логиниться
+                    completion("",nil)
                 }
             }
         }.resume()
     }
     
     func logInGoogle(completion: @escaping (Bool) -> Void) {
-     //   let signInConfig = GIDConfiguration.init(clientID: "206916034058-9ln4c2s8g418t481ho4hqje4ff6himhe.apps.googleusercontent.com")
+        //   let signInConfig = GIDConfiguration.init(clientID: "206916034058-9ln4c2s8g418t481ho4hqje4ff6himhe.apps.googleusercontent.com")
     }
 }
 
 extension URL {
-
+    
     func appending(_ queryItem: String, value: String?) -> URL {
-
+        
         guard var urlComponents = URLComponents(string: absoluteString) else { return absoluteURL }
-
+        
         // Create array of existing query items
         var queryItems: [URLQueryItem] = urlComponents.queryItems ??  []
-
+        
         // Create query item
         let queryItem = URLQueryItem(name: queryItem, value: value)
-
+        
         // Append the new query item in the existing query items array
         queryItems.append(queryItem)
-
+        
         // Append updated query items array in the url component object
         urlComponents.queryItems = queryItems
-
+        
         // Returns the url from new url components
         return urlComponents.url!
     }
