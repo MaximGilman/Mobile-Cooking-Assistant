@@ -50,12 +50,11 @@ final class LoginViewController: UIViewController {
             guard errorMsg == "" else {
                 self?.ErrorLabel.text=errorMsg
                 return }
-             self?.sl.user = userData!
+             self?.sl.userName = userData!.name
              
              let defaults = UserDefaults.standard
              defaults.set(true, forKey: "isAuth")
              defaults.set(userData!.loginData!.login, forKey: "login")
-             defaults.set(userData!.loginData!.password, forKey: "password")
 
              self?.dismiss(animated: true)
         }
@@ -72,6 +71,10 @@ final class LoginViewController: UIViewController {
         
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in
             guard error == nil else { return }
+            
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: "isAuth")
+            defaults.set(user?.profile?.email, forKey: "login")
             self.dismiss(animated: true)
 
             // If sign in succeeded, display the app's main content View.
