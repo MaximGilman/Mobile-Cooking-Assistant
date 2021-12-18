@@ -27,7 +27,7 @@ final class AppViewController: UITabBarController {
         
         viewControllers = [catalog, myRecipes, timer, profile]
         
-//        UserDefaults.standard.set(false, forKey: "isAuth")
+      //  UserDefaults.standard.set(false, forKey: "isAuth")
         isAuthenticated = UserDefaults.standard.bool(forKey: "isAuth")
         if !isAuthenticated {
 
@@ -38,11 +38,8 @@ final class AppViewController: UITabBarController {
         }
         else{
             let login = UserDefaults.standard.string(forKey: "login") as! String
-            let password = UserDefaults.standard.string(forKey: "password") as! String
-
-            let user = sl.loginService.logIn(login: login, password: password) {[weak self] errorMsg, userP in
-                self?.sl.user = userP as! User
-            }
+            
+            sl.userName = login
         }
     }
     

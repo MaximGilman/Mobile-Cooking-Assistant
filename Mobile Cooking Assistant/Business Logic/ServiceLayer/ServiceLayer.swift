@@ -17,5 +17,5 @@ final class ServiceLayer {
     
     private(set) lazy var cookingService = CookingService()
     
-    public lazy var user = User(id: 0, name: "", photo: nil, recipes: nil, loginData: nil)
+    public lazy var userName = ""
 }

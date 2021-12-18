@@ -27,16 +27,14 @@ final class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = sl.user
-        let nname = user.name
+        let nname = sl.userName
         UserNameLabel?.text = nname
         setupAchivements()
         logoutButton.makeRound(.complete)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let user = sl.user
-        let nname = user.name
+        let nname = sl.userName
         UserNameLabel?.text = nname
         setupAchivements()
         logoutButton.makeRound(.complete)
