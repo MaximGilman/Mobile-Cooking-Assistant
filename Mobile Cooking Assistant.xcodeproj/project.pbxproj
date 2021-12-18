@@ -27,6 +27,8 @@
 		F76AB3A227024B0E00F00799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F76AB3A127024B0E00F00799 /* Assets.xcassets */; };
 		F76AB3A527024B0E00F00799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76AB3A327024B0E00F00799 /* LaunchScreen.storyboard */; };
 		F780B774276D37A500E7F3A9 /* MyRecipesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F780B773276D37A500E7F3A9 /* MyRecipesViewController.xib */; };
+		F780B778276DE37E00E7F3A9 /* ChangePortionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780B776276DE37E00E7F3A9 /* ChangePortionsViewController.swift */; };
+		F780B779276DE37E00E7F3A9 /* ChangePortionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F780B777276DE37E00E7F3A9 /* ChangePortionsViewController.xib */; };
 		F78DED7B27024E0F00EF7A3D /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78DED7A27024E0F00EF7A3D /* AppViewController.swift */; };
 		F79308F4274AC90000FD454C /* RecipeDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79308F3274AC90000FD454C /* RecipeDetailsHeaderView.swift */; };
 		F79308F6274AC90D00FD454C /* RecipeDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79308F5274AC90D00FD454C /* RecipeDetailsHeaderView.xib */; };
@@ -100,6 +102,8 @@
 		F76AB3A427024B0E00F00799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F76AB3A627024B0E00F00799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F780B773276D37A500E7F3A9 /* MyRecipesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRecipesViewController.xib; sourceTree = "<group>"; };
+		F780B776276DE37E00E7F3A9 /* ChangePortionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePortionsViewController.swift; sourceTree = "<group>"; };
+		F780B777276DE37E00E7F3A9 /* ChangePortionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePortionsViewController.xib; sourceTree = "<group>"; };
 		F78DED7A27024E0F00EF7A3D /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		F79308F3274AC90000FD454C /* RecipeDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsHeaderView.swift; sourceTree = "<group>"; };
 		F79308F5274AC90D00FD454C /* RecipeDetailsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsHeaderView.xib; sourceTree = "<group>"; };
@@ -289,6 +293,15 @@
 			path = "Mobile Cooking Assistant";
 			sourceTree = "<group>";
 		};
+		F780B775276DE35200E7F3A9 /* ChangePortionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F780B776276DE37E00E7F3A9 /* ChangePortionsViewController.swift */,
+				F780B777276DE37E00E7F3A9 /* ChangePortionsViewController.xib */,
+			);
+			path = ChangePortionsViewController;
+			sourceTree = "<group>";
+		};
 		F78DED7C27024E4A00EF7A3D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,8 +425,8 @@
 		F7CBAC1E27025938003CDD49 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F7CBAC2927025A80003CDD49 /* LoginViewController.xib */,
 				F7CBAC2727025A4D003CDD49 /* LoginViewController.swift */,
+				F7CBAC2927025A80003CDD49 /* LoginViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -455,6 +468,7 @@
 		F7D47503274AC6C9000705A8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F780B775276DE35200E7F3A9 /* ChangePortionsViewController */,
 				F7D47505274AC6F4000705A8 /* RecipeDetailsViewController.swift */,
 				F7D47506274AC6F4000705A8 /* RecipeDetailsViewController.xib */,
 			);
@@ -554,8 +568,8 @@
 		F7D754C42702555100492CE4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F780B773276D37A500E7F3A9 /* MyRecipesViewController.xib */,
 				F7D754C52702555E00492CE4 /* MyRecipesViewController.swift */,
+				F780B773276D37A500E7F3A9 /* MyRecipesViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -709,6 +723,7 @@
 				F7E7447E274BD4610033CEE3 /* RecipePortionsView.xib in Resources */,
 				F7FA57CE272838320018E2EC /* CategoriesViewController.xib in Resources */,
 				F7C68FDD275E7E9C0080ECA0 /* StepViewController.xib in Resources */,
+				F780B779276DE37E00E7F3A9 /* ChangePortionsViewController.xib in Resources */,
 				F70D6E132714C8720003BD15 /* CategoryCell.xib in Resources */,
 				F7C559582714B14F00AF42AC /* RecipeCell.xib in Resources */,
 				F780B774276D37A500E7F3A9 /* MyRecipesViewController.xib in Resources */,
@@ -782,6 +797,7 @@
 				F7C559642714B5FE00AF42AC /* Ingredient.swift in Sources */,
 				F7FB687D274BB71900FEDD8A /* RecipeIngredientsView.swift in Sources */,
 				F7D754C3270253D500492CE4 /* CatalogViewController.swift in Sources */,
+				F780B778276DE37E00E7F3A9 /* ChangePortionsViewController.swift in Sources */,
 				F7E673F4274BEA3500D1EB7A /* ProfileViewController.swift in Sources */,
 				F734604B270263F80001D9AB /* UITextField+Ext.swift in Sources */,
 				F734604D270264670001D9AB /* UIView+Ext.swift in Sources */,

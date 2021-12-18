@@ -12,6 +12,8 @@ final class CookingViewController: UIPageViewController {
     private var previousButton: UIButton!
     private var nextButton: UIButton!
     
+    private var navigationBar: UINavigationBar!
+    
     private let recipe: Recipe
     private var portions: Int = 1
     private let cookingService: CookingService
@@ -22,11 +24,12 @@ final class CookingViewController: UIPageViewController {
     private var finishedCooking = false
     
     private lazy var stepViewControllers: [StepViewController] = {
-        recipe.steps.map { StepViewController(step: $0) }
+        recipe.steps.map { StepViewController(step: $0, numberOfPortions: portions) }
     }()
     
     init(recipe: Recipe, lastState: CookingState? = nil, cookingService: CookingService = ServiceLayer.shared.cookingService) {
         self.recipe = recipe
+        self.portions = recipe.numberOfPortions
         self.cookingService = cookingService
         self.cookingState = lastState
         
@@ -42,13 +45,18 @@ final class CookingViewController: UIPageViewController {
         
         title = recipe.title
         
-        
         dataSource = self
         delegate = self
         
-        let indexOfLastState = recipe.steps.firstIndex(where: { $0.id == cookingState?.lastStep?.id }) ?? 0
-        currentIndex = indexOfLastState
-        setViewControllers([stepViewControllers[indexOfLastState]], direction: .forward, animated: false)
+        if cookingService.currentRecipe?.id == recipe.id {
+            let indexOfLastState = recipe.steps.firstIndex(where: { $0.id == cookingState?.lastStep?.id }) ?? 0
+            currentIndex = indexOfLastState
+            setViewControllers([stepViewControllers[indexOfLastState]], direction: .forward, animated: false)
+        } else {
+            cookingService.saveLastState(nil, recipe: nil)
+            setViewControllers([stepViewControllers[0]], direction: .forward, animated: false)
+        }
+        setupNavigationBar()
         setupMenu()
     }
     
@@ -58,6 +66,25 @@ final class CookingViewController: UIPageViewController {
         if !finishedCooking {
             cookingService.saveLastState(.init(lastStep: recipe.steps[currentIndex], lastPortions: portions), recipe: recipe)
         }
+    }
+    
+    private func setupNavigationBar() {
+        navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 40, width: view.frame.size.width, height: 44))
+        navigationBar.isTranslucent = false
+        
+        view.addSubview(navigationBar)
+
+        let navItem = UINavigationItem(title: recipe.title)
+        let dismissItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(dismissAction))
+        dismissItem.image = UIImage(systemName: "chevron.down")
+        dismissItem.tintColor = .black
+        navItem.leftBarButtonItem = dismissItem
+
+        navigationBar.setItems([navItem], animated: false)
+    }
+    
+    @objc private func dismissAction() {
+        dismiss(animated: true, completion: nil)
     }
     
     private func setupMenu() {
@@ -116,7 +143,8 @@ final class CookingViewController: UIPageViewController {
         if currentIndex == self.recipe.steps.count - 1 {
             cookingService.saveLastState(nil, recipe: nil)
             finishedCooking = true
-            navigationController?.popViewController(animated: true)
+            dismiss(animated: true)
+//            navigationController?.popViewController(animated: true)
         }
         nextButton.showAnimatedPress(overAllDuration: 0.2) { [ weak self] in
             guard let self = self else { return }

@@ -18,7 +18,7 @@ final class RecipeDetailsViewController: ScrollableViewController {
     private var ingredientsView: RecipeIngredientsView!
     private var stepsStackView: UIStackView!
     
-    private let recipe: Recipe
+    private var recipe: Recipe
     
     init(recipe: Recipe) {
         self.recipe = recipe
@@ -68,7 +68,7 @@ final class RecipeDetailsViewController: ScrollableViewController {
     }
     
     private func setupPortionsView() {
-        portionsView = RecipePortionsView.make()
+        portionsView = RecipePortionsView.make(delegate: self)
         
         mainContainerView.addSubview(portionsView)
         portionsView.snp.makeConstraints { (make) -> Void in
@@ -79,13 +79,13 @@ final class RecipeDetailsViewController: ScrollableViewController {
     }
     
     private func setupIngredientStack() {
-        ingredientsView = RecipeIngredientsView.make(ingredients: recipe.ingredients)
+        ingredientsView = RecipeIngredientsView.make(ingredients: recipe.ingredients, portions: recipe.numberOfPortions)
         
         mainContainerView.addSubview(ingredientsView)
         ingredientsView.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(portionsView.snp.bottom).offset(10)
-            make.leading.equalTo(view.snp.leading).offset(10)
-            make.trailing.equalTo(view.snp.trailing).inset(10)
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.trailing.equalTo(view.snp.trailing).inset(20)
         }
     }
     
@@ -129,10 +129,10 @@ final class RecipeDetailsViewController: ScrollableViewController {
     
     @objc private func toCooking() {
         let state = ServiceLayer.shared.cookingService.state
+        recipe.numberOfPortions = portionsView.currentNumberOfPortions
         let viewControler = CookingViewController(recipe: recipe, lastState: state)
         viewControler.modalPresentationStyle = .fullScreen
-//        self.present(viewControler, animated: true)
-        navigationController?.pushViewController(viewControler, animated: true)
+        present(viewControler, animated: true)
     }
     
     private func setupLikeButton() {
@@ -149,5 +149,13 @@ final class RecipeDetailsViewController: ScrollableViewController {
             make.bottom.equalTo(scrollView.snp.bottom).inset(40)
         }
         likeButton.makeRound(.complete)
+    }
+}
+
+extension RecipeDetailsViewController: RecipePortionsViewDelegate {
+    
+    func didChangePortionsValue(value: Int) {
+        recipe.numberOfPortions = value
+        ingredientsView.update(portions: value)
     }
 }

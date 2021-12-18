@@ -23,8 +23,9 @@ final class CookingService {
                 timer.invalidate()
                 return
             }
-            duration.updateDuration(measure: .seconds(.down(value: interval)))
-            self.lastTime = duration
+            var durationCopy = duration
+            durationCopy.updateDuration(measure: .seconds(.down(value: interval)))
+            self.lastTime = durationCopy
             timePassed += interval
         })
     }

@@ -138,6 +138,10 @@ final class TimerViewController: UIViewController {
                 if let seconds = self?.timerValue.seconds {
                     self?.seconds = seconds
                 }
+                
+                if let minutes = self?.timerValue.minutes {
+                    self?.minutes = minutes
+                }
             }
         }
     }

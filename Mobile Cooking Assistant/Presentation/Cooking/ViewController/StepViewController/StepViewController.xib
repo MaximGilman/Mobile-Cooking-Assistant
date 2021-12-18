@@ -13,6 +13,7 @@
                 <outlet property="bodyLabel" destination="Ate-fr-rJV" id="O3D-uF-YVI"/>
                 <outlet property="ingredientsLabel" destination="R3g-6e-XR4" id="C6g-mQ-kFC"/>
                 <outlet property="ingredientsView" destination="gSo-0Q-j5S" id="teH-bM-VF2"/>
+                <outlet property="portionsNumberButton" destination="25Z-Ko-E0v" id="qnK-hy-X5x"/>
                 <outlet property="titleLabel" destination="VZT-pJ-Iox" id="QAj-zG-Rov"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,14 +23,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Preparation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZT-pJ-Iox">
-                    <rect key="frame" x="20" y="64" width="374" height="43"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Preparation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="VZT-pJ-Iox">
+                    <rect key="frame" x="20" y="94" width="374" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="36"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ate-fr-rJV">
-                    <rect key="frame" x="20" y="117" width="374" height="143.5"/>
+                    <rect key="frame" x="20" y="147" width="374" height="143.5"/>
                     <string key="text">Bash the biscuits and 150g of the flaked almonds to crumbs. Mix with the almond extract and melted butter, then press into the base of the prepared tin and bake
 for 10 mins. Set aside to cool while you make the filling.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -37,18 +38,21 @@ for 10 mins. Set aside to cool while you make the filling.</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3g-6e-XR4">
-                    <rect key="frame" x="20" y="290.5" width="115.5" height="29"/>
+                    <rect key="frame" x="20" y="320.5" width="115.5" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25Z-Ko-E0v">
-                    <rect key="frame" x="336.5" y="288" width="57.5" height="34"/>
+                    <rect key="frame" x="336.5" y="318" width="57.5" height="34"/>
                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="Portion" imagePlacement="trailing" title="2" imagePadding="7">
                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" scale="large" weight="heavy"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapPortionsButton:" destination="-1" eventType="touchUpInside" id="FNw-hU-Jgf"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSo-0Q-j5S">
                     <rect key="frame" x="20" y="309.5" width="374" height="552.5"/>
@@ -63,7 +67,7 @@ for 10 mins. Set aside to cool while you make the filling.</string>
                 <constraint firstItem="Ate-fr-rJV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7Zg-60-e8c"/>
                 <constraint firstItem="gSo-0Q-j5S" firstAttribute="top" secondItem="R3g-6e-XR4" secondAttribute="bottom" constant="10" id="F5X-Nn-LCX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ate-fr-rJV" secondAttribute="trailing" constant="20" id="IOq-yN-ZUI"/>
-                <constraint firstItem="VZT-pJ-Iox" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="PtM-uC-14z"/>
+                <constraint firstItem="VZT-pJ-Iox" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="PtM-uC-14z"/>
                 <constraint firstItem="R3g-6e-XR4" firstAttribute="top" secondItem="Ate-fr-rJV" secondAttribute="bottom" constant="30" id="QaX-1s-qYQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VZT-pJ-Iox" secondAttribute="trailing" constant="20" id="RzJ-r5-UBG"/>
                 <constraint firstItem="gSo-0Q-j5S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bxk-Qk-Axg"/>

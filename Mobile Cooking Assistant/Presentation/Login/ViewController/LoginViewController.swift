@@ -92,7 +92,10 @@ final class LoginViewController: UIViewController {
         
         loginButton.layer.cornerRadius = loginButton.bounds.midY
         registerButton.layer.cornerRadius = registerButton.bounds.midY
+        
         googleButton.layer.cornerRadius = googleButton.bounds.midY
+        googleButton.style = .wide
+        googleButton.contentHorizontalAlignment = .center
         
     }
 }

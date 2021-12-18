@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TimerValue {
+struct TimerValue {
     var minutes: Int = 0
     var seconds: Int = 0
     
@@ -20,7 +20,7 @@ final class TimerValue {
         self.seconds = seconds
     }
     
-    func updateDuration(measure: DurationMeasure) {
+    mutating func updateDuration(measure: DurationMeasure) {
         switch measure {
         case .minutes(let direction):
             switch direction {

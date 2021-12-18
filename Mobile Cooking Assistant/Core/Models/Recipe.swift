@@ -13,7 +13,7 @@ struct Recipe {
     let title: String
     let type: RecipeType
     let note: String
-    let numberOfPortions: Int
+    var numberOfPortions: Int
     let photo: UIImage
     let steps: [Step]
     

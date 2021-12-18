@@ -27,6 +27,7 @@ final class MyRecipesViewController: UIViewController {
         super.viewDidAppear(animated)
         
         setupData()
+        setupTapRecognizer()
     }
     
     private func setupData() {
@@ -38,5 +39,18 @@ final class MyRecipesViewController: UIViewController {
         titleLabel.text = cookingService.currentRecipe?.title
         
         noCookingLabel.isHidden = cookingService.currentRecipe != nil
+    }
+    
+    private func setupTapRecognizer() {
+        let tapOnView = UITapGestureRecognizer(target: self, action: #selector(toCooking))
+        tapOnView.cancelsTouchesInView = false
+        containerView.addGestureRecognizer(tapOnView)
+    }
+    
+    @objc private func toCooking() {
+        let state = ServiceLayer.shared.cookingService.state
+        let viewControler = CookingViewController(recipe: cookingService.currentRecipe!, lastState: state)
+        viewControler.modalPresentationStyle = .fullScreen
+        present(viewControler, animated: true, completion: nil)
     }
 }
